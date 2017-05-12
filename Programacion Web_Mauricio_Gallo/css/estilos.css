@@ -1,7 +1,4 @@
-@font-face {
-  font-family: FuentePTSans;
-  src: url(../fuentes/PT_Sans-Web-Regular.ttf);
-}
+
 @media (min-width:900px) {
   .contenedor2{
     color: red;
@@ -22,7 +19,7 @@
    padding-left: 2px;
    padding-right: 1px;
    background-color: #02010a;
-   font-family: 'Ranga', cursive;
+   font-family: 'Dancing Script', cursive;
  }
 header{
   background-color:  #5b7989;
@@ -34,7 +31,18 @@ header{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   display: flex;
+  animation-name: slidein;
+  animation-duration: 3s;
   }
+  @-webkit-keyframes slidein {
+    from {
+      margin-top: 150%;
+    }
+    to {
+    margin-top: -5%;
+   }
+  }
+
   h1::selection{
     background: white;
   }
@@ -58,22 +66,29 @@ a{
 .imagen-central{
   background-color: #82c3a6;
   margin: 0;
-  width: 100%
+
+}
+#imagen-1{
+  box-shadow: 10px 10px 10px  #82c3a6;
+  border:2px solid black;
+  width: 50%;
 }
 section{
   background-color: #d5c75f;
-  padding: auto;
-  margin: 0;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: row;
+  text-align: center;
+  width: 100%;
 }
 
 .imagen-secundaria1{
   box-shadow: 10px 10px 10px  #82c3a6;
   border:2px solid black;
+  text-align: center;
+
 
 }
-.contenedor1:hover{transition: all 1s;
+.contenedor1:hover{transition: all 5s;
 transform: rotate(10deg);
 -webkit-animation-direction: reverse;
 animation-direction: reverse;
@@ -84,9 +99,12 @@ moz-transform: rotate(-10deg); // Firefox
 .imagen-secundaria2{
   box-shadow: 5px 5px 5px  #82c3a6;
   border:2px solid black;
+
 }
  .contenedor2:hover{
+   transition: all 3s;
    transform: translate(20px,-5px);
+
  }
  footer{
    background-color:  #C6d5c5;
@@ -97,24 +115,24 @@ moz-transform: rotate(-10deg); // Firefox
    height:auto;
    padding-top: 0px;
    padding-bottom: 10px;
-
  }
 #contacto{
-margin-left: 100px;
+margin-left: 50px;
 }
 #Terminos{
-  margin-left: 100px;
+  margin-left: 50px;
 }
 #Redessociales{
-  margin-left: 100px;
+  margin-left: 50px;
+  padding: 1px;
 }
-#hiper{
-  width:20%;
-  height: 20%;
-  padding-left: auto;
+.hiper {
+vertical-align: middle;
+width: 15%;
 }
+
 #Derechos{
-  margin-left: 100px;
+  margin-left:0px;
 }
 
 @media screen and (max-width: 900px) {
@@ -124,7 +142,6 @@ header{
   display: block;
   text-align: center;
   }
-
 
 section{
   width: 100%;
